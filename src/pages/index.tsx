@@ -71,7 +71,7 @@ export default function Home() {
         </div>
       </main>
 
-      <aside className={styles.portfolioContainer}>
+      <aside className={styles.mainContainer}>
         <Portfolio />
         <Skills />
         <Tools />

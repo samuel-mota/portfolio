@@ -1,4 +1,6 @@
 .container {
+  z-index: 2; // to be above the intro component
+
   position: absolute;
   display: flex;
   left: 14.76rem; // ((87,6px / 2) - 280px) / 16px
@@ -7,13 +9,11 @@
   border: none;
 
   background-color: black;
-  box-shadow: 5px 5px 5px gray;
+  // box-shadow: 5px 5px 5px gray; // feio, arrumar
   border-radius: 100px;
   padding: 0 .3rem;
 
   cursor: pointer;
-
-  z-index: 1; // to be above the intro component
 
   .icons {
     margin: .2rem;

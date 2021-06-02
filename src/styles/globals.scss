@@ -1,6 +1,4 @@
-
-
-
+@import "./variables.scss";
 // globals
 html,
 body {
@@ -11,6 +9,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bilbo Swash Caps', cursive;
+  margin: 0;
 }
 
 a {

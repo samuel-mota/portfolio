@@ -1,25 +1,16 @@
-// colors
-$about-light-bg: linear-gradient(180deg, #ffee93 61.12%, #fcf5c7 100%);
-$about-light: #ffee93;
-$about-dark-bg: linear-gradient(180deg, #684f13 61.12%, #857140 100%);
-$about-dark: #684f13;
-$portfolio-dark: #9b2e12;
-$portfolio-light: #f9b18b;
-$skills-light: #adf7b6;
-$skills-dark: #0d6918;
-$skills-lighter: #dff7e2;
-$tools-light: #a7d3de;
-$tools-dark: #14667a;
-$tools-lighter: #deebee;
+@import "./variables.scss";
 
 .container {
-  // padding: 0 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  flex: 1;
+
   min-height: 100vh;
   height: 100vh;
+
+  overflow: auto;
 
   // min-width: 100vw;
   // width: 100vw;
@@ -28,8 +19,7 @@ $tools-lighter: #deebee;
 .aboutContainer {
   position: relative; // button dark mode
   padding: 1.5rem;
-  // align-self: flex-start;
-  // flex: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -41,11 +31,6 @@ $tools-lighter: #deebee;
 
   background: $about-light-bg;
 }
-
-// .hexagoneSvg {
-//   visibility: hidden;
-//   position: absolute;
-// }
 
 .hexagone {
   display: inline-block;
@@ -73,7 +58,7 @@ $tools-lighter: #deebee;
   width: 100%;
 }
 
-.portfolioContainer {
+.mainContainer {
   display: flex;
   flex: 3;
   flex-direction: column;
@@ -81,6 +66,8 @@ $tools-lighter: #deebee;
   align-items: flex-start;
 
   height: 100%;
+
+  overflow: hidden;
 }
 
 // .title a {

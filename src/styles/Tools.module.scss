@@ -1,5 +1,9 @@
 
 
 .tools {
-  flex: 2;
+  flex: 2;  // 20% of the screen
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

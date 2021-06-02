@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import styles from '../../styles/DarkModeButton.module.scss';
+import { useState } from "react";
+import styles from "../../styles/DarkModeButton.module.scss";
 
 const DarkModeButton = () => {
   const [darkMode, setDarkMode] = useState(false);
-  
+
   function handleDarkModeChange() {
     darkMode ? setDarkMode(false) : setDarkMode(true);
   }
@@ -32,6 +32,6 @@ const DarkModeButton = () => {
       />
     </button>
   );
-}
+};
 
 export default DarkModeButton;
