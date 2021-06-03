@@ -25,6 +25,7 @@ export default function Home() {
 
       <main className={styles.aboutContainer}>
         <DarkModeButton />
+        
         <img src="/assets/images/sam-logo-light.svg" alt="logo" />
         <div className={styles.hexagone}></div>
         {/* svg to make round corners in the hexagone */}

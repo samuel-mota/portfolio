@@ -17,7 +17,7 @@
 }
 
 .aboutContainer {
-  position: relative; // button dark mode
+  position: relative;
   padding: 1.5rem;
 
   display: flex;
@@ -30,6 +30,13 @@
   height: inherit;
 
   background: $about-light-bg;
+
+  h1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 
 .hexagone {
@@ -52,8 +59,11 @@
 
 .socialIcons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+
+  position: absolute;
+  bottom: 2rem;
 
   width: 100%;
 }

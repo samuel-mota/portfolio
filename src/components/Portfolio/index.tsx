@@ -40,7 +40,10 @@ const Portfolio = () => {
                 alt=""
                 className={styles.portfolioBgImage}
               />
+              <div className={styles.overlay}>
+                
               {name}
+              </div>
             </div>
           ))
         )}
