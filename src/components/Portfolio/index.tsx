@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Image from 'next/image';
 import usePortfolio from "../usePortfolio";
 
 import Intro from "../Intro";
@@ -32,12 +31,14 @@ const Portfolio = () => {
 
       <div className={styles.portfolios}>
         {!hasData ? (
-          <div>{textState}</div>
+          <div className={styles.portfolio}>{textState}</div>
         ) : (
           portfolio.map(({ name }: PortfolioProps) => (
             <div className={styles.portfolio} key={name}>
               <img
-                src={`/assets/images/samuel-mota.jpg`} alt="" className={styles.portfolioBgImage}
+                src={`/assets/images/samuel-mota.jpg`}
+                alt=""
+                className={styles.portfolioBgImage}
               />
               {name}
             </div>
