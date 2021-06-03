@@ -2,6 +2,7 @@ TODO:
 - CORRECT OVERFLOW WHEN HEIGHT IS DECREASED
 - CHECK IF ICONS SVG MAY BE TRANSFORMED WHEN CHANGE DARK MODE
 - add LOADING page to eliminate FOUC
+- create mixin for positioning skills/tools icons
 
 
 

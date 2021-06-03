@@ -1,4 +1,6 @@
 
+// positioning
+$positionright: 1.94rem;
 
 // colors
 $gray1: #333333;
@@ -10,9 +12,9 @@ $gray6: #f2f2f2;
 
 $shadowStyle: rgba(50,50,0,.2);
 
-$about-light-bg: linear-gradient(180deg, #ffee93 61.12%, #fcf5c7 100%);
+$about-bg-light: linear-gradient(180deg, #ffee93 61.12%, #fcf5c7 100%);
 $about-light: #ffee93;
-$about-dark-bg: linear-gradient(180deg, #684f13 61.12%, #857140 100%);
+$about-bg-dark: linear-gradient(180deg, #684f13 61.12%, #857140 100%);
 $about-dark: #684f13;
 $portfolio-dark: #9b2e12;
 $portfolio-light: #f9b18b;

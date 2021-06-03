@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import "./_variables.scss";
 
 .container {
   display: flex;
@@ -29,7 +29,7 @@
   width: 17.5rem;
   height: inherit;
 
-  background: $about-light-bg;
+  background: $about-bg-light;
 
   h1 {
     width: 100%;

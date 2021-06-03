@@ -1,9 +1,13 @@
-
+@import "./_variables.scss";
 
 .tools {
   flex: 2;  // 20% of the screen
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
+  width: 100%;
+
+  background: $tools-light;
 }
