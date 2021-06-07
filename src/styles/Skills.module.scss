@@ -17,10 +17,11 @@
   $columnSize: 6.25rem;
 
   display: grid;
-  grid:
-    [row1-start] "icon1 icon3 icon5 icon7 icon9 icon11" $rowSize [row1-end]
-    [row2-start] "icon2 icon4 icon6 icon8 icon10 icon12" $rowSize [row2-end]
-    / $columnSize $columnSize $columnSize $columnSize $columnSize $columnSize;
+
+  grid-template-columns: repeat(8, $columnSize);
+  grid-template-rows: repeat(2, $rowSize);
+
+  grid-auto-flow: column; // change the flow to fill up column first
     
   place-items: center;
   align-content: center;
@@ -37,10 +38,10 @@
 }
 
 .skillIcon {
-  transition: transform 1s;
+  transition: transform .7s;
 
   img {
-    transition: filter 1s;
+    transition: filter .7s;
   
     &:hover {
       filter: drop-shadow( 0px 0px 5px rgba(0,0,0,.5));
@@ -51,43 +52,7 @@
     transform: scale(170%);
   }
 
-  &:nth-child(1) {
-    grid-area: icon1;
-  }
-  &:nth-child(2) {
-    grid-area: icon2;
-    position: relative;
-    right: -50px;
-  }
-  &:nth-child(3) {
-    grid-area: icon3;
-  }
-  &:nth-child(4) {
-    grid-area: icon4;
-    position: relative;
-    right: -50px;
-  }
-  &:nth-child(5) {
-    grid-area: icon5;
-  }
-  &:nth-child(6) {
-    grid-area: icon6;
-    position: relative;
-    right: -50px;
-  }
-  &:nth-child(7) {
-    grid-area: icon7;
-  }
-  &:nth-child(8) {
-    grid-area: icon8;
-    position: relative;
-    right: -50px;
-  }
-  &:nth-child(9) {
-    grid-area: icon9;
-  }
-  &:nth-child(10) {
-    grid-area: icon10;
+  &:nth-child(even) {
     position: relative;
     right: -50px;
   }
