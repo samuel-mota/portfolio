@@ -1,4 +1,5 @@
-@import "./_variables.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
 
 .tools {
   flex: 2;  // 20% of the screen
@@ -11,3 +12,5 @@
 
   background: $tools-light;
 }
+
+@include iconsHoneycomb(10);
