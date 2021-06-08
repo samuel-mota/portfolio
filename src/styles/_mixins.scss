@@ -1,9 +1,22 @@
+@import "./variables.scss";
+
+@mixin overflowBarCorrection($offset: $positionRight) {
+  width: calc(100% + #{$offset});
+}
+
 @mixin iconsHoneycomb($iconsAmount, $rowNumber: 2, $rowWidth: 5.25rem, $columnWidth: 6.25rem) {
   $columns: ceil($iconsAmount / 2); // math.ceil
+  $minmax: minmax($columnWidth, 62rem / $columns);
 
   .icons {
     display: grid;
-    grid-template-columns: repeat($columns, $columnWidth);
+
+    @if $rowNumber > 1 {
+      grid-template-columns: repeat($columns+1, $minmax);
+    } @else {
+      grid-template-columns: repeat($iconsAmount, $columnWidth);
+    }
+
     grid-template-rows: repeat($rowNumber, $rowWidth);
     grid-auto-flow: column; // change the flow to fill up column first
     place-items: center;
@@ -12,16 +25,19 @@
     width: 100%;
     height: 100%;
 
-    padding-left: $positionright;
-
+    padding-left: $positionRight;
+    
     position: relative;
-    right: $positionright;
-
+    right: $positionRight;
+    
     overflow: auto hidden;
-
+    
     .icon {
+      padding-right: $positionRight;
+      padding-left: $positionRight;
+
       &:hover {
-        z-index: 10; // to shadow be above all icons when hovering
+        z-index: 10; // to make shadow be above all icons when hovering
       }
 
       img {
@@ -33,9 +49,11 @@
         }
       }
 
-      &:nth-child(even) {
-        position: relative;
-        right: -($columnWidth / 2);
+      @if $rowNumber > 1 {
+        &:nth-child(even) {
+          position: relative;
+          right: -50%;
+        }
       }
     }
   }

@@ -3,7 +3,7 @@
 $widthContainer: 200px;
 
 .shadow {
-    z-index: 1;
+  z-index: 20;
   height: 100%;
   width: $widthContainer;
   filter: drop-shadow(5px 0 5px $shadowStyle);
@@ -32,7 +32,6 @@ $widthContainer: 200px;
     }
   }
 }
-
 
 .portfolioLight {
   background-color: $portfolio-light;

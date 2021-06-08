@@ -5,7 +5,8 @@
   flex: 5; // 50% of the screen height
 
   display: flex;
-  width: calc(100% + #{$positionright});
+
+  @include overflowBarCorrection();
 }
 
 .portfolios {
@@ -13,20 +14,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  // min-width: min-content;
 
-  // flex: 0 0 auto;
   overflow-x: auto;
-  width: calc(100% + #{$positionright});
+  width: calc(100% + #{$positionRight});
 
   position: relative;
-  right: $positionright;
+  right: $positionRight;
 
   background-color: $portfolio-light;
 }
 
 .portfolio {
-  // border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,12 +36,6 @@
   // for image background
   overflow: hidden;
   position: relative;
-
-  // transition: width 1s;
-
-  // &:hover {
-  //   width: calc(11.25rem + 5rem);
-  // }
 
   .portfolioBgImage {
     opacity: 0.3;
