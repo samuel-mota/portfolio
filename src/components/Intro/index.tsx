@@ -1,3 +1,4 @@
+import { useDarkMode } from "../../contexts/DarkModeContext";
 import styles from "../../styles/Intro.module.scss";
 
 interface IntroProps {
@@ -5,30 +6,23 @@ interface IntroProps {
 }
 
 const Intro = ({ title }: IntroProps) => {
-  const stylesLight = {
-    portfolio: styles.portfolioLight,
-    skills: styles.skillsLight,
-    tools: styles.toolsLight,
-  };
-
-  const stylesDark = {
-    portfolio: styles.portfolioDark,
-    skills: styles.skillsDark,
-    tools: styles.toolsDark,
-  };
+  const { darkMode } = useDarkMode();
 
   return (
     <div className={styles.shadow}>
       <div
-        className={`${styles.introContainer} ${stylesLight[title]}`}
+        className={`${styles.introContainer} ${styles[title]}`}
         style={{
-          backgroundImage: `url("./assets/icons/${title}-bg-light.svg")`,
+          backgroundImage: `url("./assets/icons/${title}-bg-${
+            darkMode ? "dark" : "light"
+          }.svg")`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "100px",
+          backgroundPosition: "90px",
         }}
       >
         <img
-          src={`./assets/icons/${title}-icon-light.svg`}
+          src={`./assets/icons/${title}-icon-${
+            darkMode ? "dark" : "light"}.svg`}
           alt={`${title} icon`}
         />
         <h1>{title}</h1>

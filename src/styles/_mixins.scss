@@ -4,7 +4,7 @@
   width: calc(100% + #{$offset});
 }
 
-@mixin iconsHoneycomb($iconsAmount, $rowNumber: 2, $rowWidth: 5.25rem, $columnWidth: 6.25rem) {
+@mixin iconsHoneycomb($iconsAmount, $rowNumber: 2, $rowWidth: 5.25rem, $columnWidth: 6.25rem, $scaleInitial: 100%, $scaleFinal) {
   $columns: ceil($iconsAmount / 2); // math.ceil
   $minmax: minmax($columnWidth, 62rem / $columns);
 
@@ -26,12 +26,12 @@
     height: 100%;
 
     padding-left: $positionRight;
-    
+
     position: relative;
     right: $positionRight;
-    
+
     overflow: auto hidden;
-    
+
     .icon {
       padding-right: $positionRight;
       padding-left: $positionRight;
@@ -41,11 +41,12 @@
       }
 
       img {
+        transform: scale($scaleInitial);
         transition: filter 1.3s, transform 0.7s;
 
         &:hover {
-          filter: drop-shadow(0px 0px 3px rgba($shadowStyle, 0.6));
-          transform: scale(170%);
+          filter: drop-shadow(0px 0px 3px var(--shadow-style));
+          transform: scale($scaleFinal);
         }
       }
 
@@ -60,27 +61,29 @@
 }
 
 @mixin gradientAnimation($start, $end, $transTime) {
-  background-size: 100%;
-  // background-image: linear-gradient($end, $end);
   position: relative;
-  // z-index: 100;
 
-  &:before {
+  z-index: 0;
+
+  &::before {
     content: "";
-    background-image: linear-gradient($end, $start);
     display: block;
     height: 100%;
     width: 100%;
+    opacity: 0;
+
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
-    z-index: -100;
+    background-image: linear-gradient($start, $end);
+
+    z-index: -1;
+
     transition: opacity $transTime;
   }
 
   &:hover {
-    &:before {
+    &::before {
       opacity: 1;
     }
   }

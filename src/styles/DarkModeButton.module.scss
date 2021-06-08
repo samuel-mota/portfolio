@@ -1,26 +1,29 @@
+@import "./variables.scss";
+@import "./colors.scss";
+
 .container {
+  $btnWidth: 5.125rem; // 90px
+
+  width: $btnWidth;
+
   z-index: 100; // to be above the intro component
 
-  position: absolute;
   display: flex;
-  left: 14.76rem; // ((87,6px / 2) - 280px) / 16px
-  top: .2rem;
+  justify-content: space-evenly;
+  
+  position: absolute;
+  right: -($btnWidth) / 2; // center the button
+  top: 0.2rem;
 
+  
   border: none;
-
-  background-color: black;
-  // box-shadow: 5px 5px 5px gray; // feio, arrumar
-  border-radius: 100px;
-  padding: 0 .3rem;
+  background-color: var(--gray1);
+  box-shadow: 0px 0px 3px var(--shadow-style);
+  border-radius: 50px;
 
   cursor: pointer;
 
   .icons {
-    margin: .2rem;
+    margin: 0.2rem;
   }
-}
-
-.containerDarkMode {
-  background-color: white;
-  
 }

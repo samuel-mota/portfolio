@@ -1,7 +1,10 @@
+import { useDarkMode } from "../../contexts/DarkModeContext";
 import styles from "../../styles/Tools.module.scss";
 import Intro from "../Intro";
 
 const Tools = () => {
+  const { darkMode } = useDarkMode();
+
   return (
     <div className={styles.tools}>
       <Intro title="tools" />
@@ -13,7 +16,7 @@ const Tools = () => {
           />
         </div>
         <div className={styles.icon}>
-          <img src="/assets/icons/tools-icons/heroku-icon-light.svg" alt="heroku icon" />
+          <img src={`/assets/icons/tools-icons/heroku-icon-${darkMode ? "dark" : "light"}.svg`} alt="heroku icon" />
         </div>
         <div className={styles.icon}>
           <img src="/assets/icons/tools-icons/jira-icon.svg" alt="jira icon" />
@@ -22,13 +25,13 @@ const Tools = () => {
           <img src="/assets/icons/tools-icons/netlify-icon.svg" alt="netlify icon" />
         </div>
         <div className={styles.icon}>
-          <img src="/assets/icons/tools-icons/ps-icon-light.svg" alt="ps icon" />
+          <img src={`/assets/icons/tools-icons/ps-icon-${darkMode ? "dark" : "light"}.svg`} alt="ps icon" />
         </div>
         <div className={styles.icon}>
           <img src="/assets/icons/tools-icons/trello-icon.svg" alt="trello icon" />
         </div>
         <div className={styles.icon}>
-          <img src="/assets/icons/tools-icons/vercel-icon-light.svg" alt="vercel icon" />
+          <img src={`/assets/icons/tools-icons/vercel-icon-${darkMode ? "dark" : "light"}.svg`} alt="vercel icon" />
         </div>
         <div className={styles.icon}>
           <img src="/assets/icons/tools-icons/vscode-icon.svg" alt="vscode icon" />

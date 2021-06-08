@@ -1,12 +1,10 @@
 import { useState } from "react";
+import { useDarkMode } from "../../contexts/DarkModeContext";
+
 import styles from "../../styles/DarkModeButton.module.scss";
 
 const DarkModeButton = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  function handleDarkModeChange() {
-    darkMode ? setDarkMode(false) : setDarkMode(true);
-  }
+  const { darkMode, changeDarkModeState } = useDarkMode();
 
   return (
     <button
@@ -14,7 +12,7 @@ const DarkModeButton = () => {
       className={`${styles.container} ${
         darkMode ? styles.containerDarkMode : ""
       }`}
-      onClick={handleDarkModeChange}
+      onClick={changeDarkModeState}
     >
       <img
         className={styles.icons}

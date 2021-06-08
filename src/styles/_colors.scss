@@ -1,0 +1,33 @@
+// *****************************************
+// light colors on globals.scss - :root{...}
+// *****************************************
+  $portfolio-bg: #f9b18b;
+  $portfolio-text: #9b2e12;
+
+.dark {
+  --gray1: #f2f2f2;
+  --gray2: #e0e0e0;
+  --gray3: #bdbdbd;
+  --gray4: #828282;
+  --gray5: #4f4f4f;
+  --gray6: #333333;
+  
+  --shadow-style: rgba(50,50,0,.2);
+  
+  --text: #f2f2f2;
+  --about-bg: linear-gradient(180deg, #684f13 61.12%, #857140 100%);
+  --about: #684f13;
+  --about-title: #ffee93;
+  
+  --portfolio-text: #f9b18b;
+  --portfolio-bg: #9b2e12;
+  --portfolio-secondary: #5E1300;
+  
+  --skills-text: #adf7b6;
+  --skills-bg: #0d6918;
+  --skills-secondary: #27432A;
+  
+  --tools-text: #a7d3de;
+  --tools-bg: #14667a;
+  --tools-secondary: #224751;
+}

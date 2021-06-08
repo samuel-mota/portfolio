@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import "./mixins.scss";
+@import "./colors.scss";
 
 .skills {
   flex: 3; // 30% of the screen
@@ -8,9 +9,9 @@
   justify-content: flex-start;
   align-items: center;
 
-  background: $skills-light;
+  background: var(--skills-secondary);
 
   @include overflowBarCorrection();
 }
 
-@include iconsHoneycomb(10);
+@include iconsHoneycomb(10, $scaleFinal: 170%);

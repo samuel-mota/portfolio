@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import "./mixins.scss";
+@import "./colors.scss";
 
 .tools {
   flex: 2;  // 20% of the screen
@@ -8,9 +9,9 @@
   justify-content: flex-start;
   align-items: center;
 
-  background: $tools-light;
+  background: var(--tools-secondary);
   
   @include overflowBarCorrection();
 }
 
-@include iconsHoneycomb(10, 1);
+@include iconsHoneycomb(10, 1, $columnWidth: 5.75rem, $scaleInitial: 80%, $scaleFinal: 150%);

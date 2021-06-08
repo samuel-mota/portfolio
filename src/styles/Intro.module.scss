@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./colors.scss";
 
 $widthContainer: 200px;
 
@@ -6,7 +7,7 @@ $widthContainer: 200px;
   z-index: 20;
   height: 100%;
   width: $widthContainer;
-  filter: drop-shadow(5px 0 5px $shadowStyle);
+  filter: drop-shadow(3px 5px 5px var(--shadow-style));
 }
 
 .introContainer {
@@ -33,32 +34,17 @@ $widthContainer: 200px;
   }
 }
 
-.portfolioLight {
-  background-color: $portfolio-light;
-  color: $portfolio-dark;
+.portfolio {
+  background-color: var(--portfolio-bg);
+  color: var(--portfolio-text);
 }
 
-.skillsLight {
-  background-color: $skills-light;
-  color: $skills-dark;
+.skills {
+  background-color: var(--skills-bg);
+  color: var(--skills-text);
 }
 
-.toolsLight {
-  background-color: $tools-light;
-  color: $tools-dark;
-}
-
-.portfolioDark {
-  background-color: $portfolio-dark;
-  color: $portfolio-light;
-}
-
-.skillsDark {
-  background-color: $skills-dark;
-  color: $skills-light;
-}
-
-.toolsDark {
-  background-color: $tools-dark;
-  color: $tools-light;
+.tools {
+  background-color: var(--tools-bg);
+  color: var(--tools-text);
 }

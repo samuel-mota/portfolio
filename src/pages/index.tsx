@@ -11,12 +11,15 @@ import { faCodepen } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 import DarkModeButton from "../components/DarkModeButton";
+import { useDarkMode } from "../contexts/DarkModeContext";
+
 import Portfolio from "../components/Portfolio";
 import Skills from "../components/Skills";
 import Tools from "../components/Tools";
 
-
 export default function Home() {
+  const { darkMode } = useDarkMode();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -25,8 +28,9 @@ export default function Home() {
 
       <main className={styles.aboutContainer}>
         <DarkModeButton />
-        
-        <img src="/assets/images/sam-logo-light.svg" alt="logo" />
+
+        <img src={`/assets/images/sam-logo-${
+            darkMode ? "dark" : "light"}.svg`} alt="logo" />
         <div className={styles.hexagone}></div>
         {/* svg to make round corners in the hexagone */}
         <svg
@@ -52,9 +56,12 @@ export default function Home() {
             </filter>
           </defs>
         </svg>
+
         <h1>
-          About me <img src="/assets/icons/spaceship-light.svg" alt="" />
+          About me <img src={`/assets/icons/spaceship-${
+            darkMode ? "dark" : "light"}.svg`} alt="" />
         </h1>
+
         <p>
           Hello! My name is Samuel Mota, I am a self taught multilingual
           professional with wide experiences in positions from different areas.
@@ -81,8 +88,8 @@ export default function Home() {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  return {
-    props: {}, // will be passed to the page component as props
-  };
-};
+// export const getStaticProps: GetStaticProps = async (context) => {
+//   return {
+//     props: {}, // will be passed to the page component as props
+//   };
+// };

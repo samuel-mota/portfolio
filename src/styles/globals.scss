@@ -1,14 +1,21 @@
 @import "./variables.scss";
+@import "./colors.scss";
+
 // globals
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bilbo Swash Caps', cursive;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bilbo Swash Caps", cursive;
   margin: 0;
 }
 
@@ -19,4 +26,32 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --gray1: #333333;
+  --gray2: #4f4f4f;
+  --gray3: #828282;
+  --gray4: #bdbdbd;
+  --gray5: #e0e0e0;
+  --gray6: #f2f2f2;
+
+  --shadow-style: rgba(50, 50, 0, 0.5);
+
+  --text: #333333;
+  --about-bg: linear-gradient(180deg, #ffee93 61.12%, #fcf5c7 100%);
+  --about: #ffee93;
+  --about-title: #684f13;
+
+  --portfolio-text: #9b2e12;
+  --portfolio-bg: #f9b18b;
+  --portfolio-secondary: #ffddcb;
+
+  --skills-text: #0d6918;
+  --skills-bg: #adf7b6;
+  --skills-secondary: #dff7e2;
+
+  --tools-text: #14667a;
+  --tools-bg: #a7d3de;
+  --tools-secondary: #deebee;
 }
