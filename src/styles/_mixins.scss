@@ -12,7 +12,7 @@
     display: grid;
 
     @if $rowNumber > 1 {
-      grid-template-columns: repeat($columns+1, $minmax);
+      grid-template-columns: repeat($columns, $minmax);
     } @else {
       grid-template-columns: repeat($iconsAmount, $columnWidth);
     }
