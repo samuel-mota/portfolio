@@ -29,8 +29,10 @@ export default function Home() {
       <main className={styles.aboutContainer}>
         <DarkModeButton />
 
-        <img src={`/assets/images/sam-logo-${
-            darkMode ? "dark" : "light"}.svg`} alt="logo" />
+        <img
+          src={`/assets/images/sam-logo-${darkMode ? "dark" : "light"}.svg`}
+          alt="logo"
+        />
         <div className={styles.hexagone}></div>
         {/* svg to make round corners in the hexagone */}
         <svg
@@ -58,8 +60,11 @@ export default function Home() {
         </svg>
 
         <h1>
-          About me <img src={`/assets/icons/spaceship-${
-            darkMode ? "dark" : "light"}.svg`} alt="" />
+          About me{" "}
+          <img
+            src={`/assets/icons/spaceship-${darkMode ? "dark" : "light"}.svg`}
+            alt=""
+          />
         </h1>
 
         <p>
@@ -72,10 +77,32 @@ export default function Home() {
           React, PHP, MySQL) before starting a Computer Science degree.
         </p>
         <div className={styles.socialIcons}>
-          <FontAwesomeIcon icon={faLinkedin} size="2x" />
-          <FontAwesomeIcon icon={faGithub} size="2x" />
-          <FontAwesomeIcon icon={faCodepen} size="2x" />
-          <FontAwesomeIcon icon={faEnvelope} size="2x" />
+          <a
+            href="https://www.linkedin.com/in/samuel-mota/"
+            target="_blank"
+            rel="nofollow noreferrer noopener"
+          >
+            <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          </a>
+          <a
+            href="https://github.com/samuel-mota"
+            target="_blank"
+            rel="nofollow noreferrer noopener"
+          >
+            <FontAwesomeIcon icon={faGithub} size="2x" />
+          </a>
+          <a
+            href="https://codepen.io/samuel-mota"
+            target="_blank"
+            rel="nofollow noreferrer noopener"
+          >
+            <FontAwesomeIcon icon={faCodepen} size="2x" />
+          </a>
+          <a
+            href="mailto:hello@samuelmota.dev?subject=Message from Portfolio website&body=Write your message :)"
+          >
+            <FontAwesomeIcon icon={faEnvelope} size="2x" />
+          </a>
         </div>
       </main>
 

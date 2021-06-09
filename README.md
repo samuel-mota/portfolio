@@ -3,8 +3,10 @@ TODO:
 - CHECK IF ICONS SVG MAY BE TRANSFORMED WHEN CHANGE DARK MODE
 - add LOADING page to eliminate FOUC
 - create mixin for positioning skills/tools icons
-
-
+- *** add projects and its links and pictures ***
+- *** add data inside icons when hovering *** 
+- *** change about text ***
+- *** make responsive ***
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

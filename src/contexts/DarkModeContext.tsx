@@ -21,15 +21,21 @@ export default function DarkModeContextProvider({
   children,
 }: DarkModeContextProviderProps) {
   const [darkMode, setDarkMode] = useState(false);
-
+  
   function changeDarkModeState() {
     darkMode ? setDarkMode(false) : setDarkMode(true);
   }
+  
+  useEffect(() => {
+    setDarkMode(localStorage.getItem("sam_darkMode") === "true");
+  }, []);
 
   useEffect(() => {
     darkMode
       ? document.querySelector("body").classList.add("dark")
       : document.querySelector("body").classList.remove("dark");
+
+    localStorage.setItem("sam_darkMode", String(darkMode));
   }, [darkMode]);
 
   return (
@@ -39,7 +45,7 @@ export default function DarkModeContextProvider({
   );
 }
 
-// abstraction to import only one hook in the components
+// abstraction to import only the "useDarkMode" hook in the components
 export const useDarkMode = () => {
   return useContext(DarkModeContext);
 };
