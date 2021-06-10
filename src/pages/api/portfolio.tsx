@@ -5,8 +5,8 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   res.status(200).json([
     { name: "John Doe", age: 20 },
     { name: "Samuel Mota", age: 37 },
-    { name: "Samuel Mota", age: 37 },
-    { name: "Samuel Mota", age: 37 },
-    { name: "Samuel Mota", age: 37 },
+    { name: "Samuel Mota1", age: 37 },
+    { name: "Samuel Mota2", age: 37 },
+    { name: "Samuel Mota3", age: 37 },
   ]);
 };

@@ -1,16 +1,19 @@
-import { useState } from "react";
-import { useDarkMode } from "../../contexts/DarkModeContext";
+import { useDarkMode } from "../../contexts/AppContext";
 
 import styles from "../../styles/DarkModeButton.module.scss";
 
-const DarkModeButton = () => {
+interface DarkModeButtonProps {
+  media: string;
+}
+
+const DarkModeButton = ({media = "desktop"}: DarkModeButtonProps) => {
   const { darkMode, changeDarkModeState } = useDarkMode();
 
   return (
     <button
       type="button"
-      className={`${styles.container} ${
-        darkMode ? styles.containerDarkMode : ""
+      className={`${styles.container} ${darkMode && styles.containerDarkMode} ${
+        media === "mobile" ? styles.containerMobile : styles.containerDesktop
       }`}
       onClick={changeDarkModeState}
     >

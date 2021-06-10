@@ -1,4 +1,4 @@
-import { useDarkMode } from "../../contexts/DarkModeContext";
+import { useDarkMode } from "../../contexts/AppContext";
 import styles from "../../styles/Intro.module.scss";
 
 interface IntroProps {
@@ -16,8 +16,7 @@ const Intro = ({ title }: IntroProps) => {
           backgroundImage: `url("./assets/icons/${title}-bg-${
             darkMode ? "dark" : "light"
           }.svg")`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "90px",
+          
         }}
       >
         <img

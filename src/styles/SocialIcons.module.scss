@@ -1,0 +1,32 @@
+@import "./variables";
+@import "./colors";
+@import "./mixins";
+
+.containerDesktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  bottom: 0;
+
+  width: 100%;
+
+  @include tablet() {
+    display: none;
+  }
+}
+
+.containerTablet {
+  display: none;
+
+  @include tablet() {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    a {
+      transform: scale(140%);
+    }
+  }
+}

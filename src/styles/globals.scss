@@ -28,6 +28,12 @@ a {
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 :root {
   --gray1: #333333;
   --gray2: #4f4f4f;
@@ -40,6 +46,7 @@ a {
 
   --text: #333333;
   --about-bg: linear-gradient(180deg, #ffee93 61.12%, #fcf5c7 100%);
+  --menu-bg: linear-gradient(0deg, #ffee93 61.12%, #fcf5c7 100%);
   --about: #ffee93;
   --about-title: #684f13;
 

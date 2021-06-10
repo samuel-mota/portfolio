@@ -3,15 +3,39 @@
 @import "./colors.scss";
 
 .tools {
-  flex: 2;  // 20% of the screen
+  flex: 2; // 20% of the screen
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
   background: var(--tools-secondary);
-  
+
   @include overflowBarCorrection();
 }
 
 @include iconsHoneycomb(10, 1, $columnWidth: 5.75rem, $scaleInitial: 80%, $scaleFinal: 150%);
+
+@include tablet() {
+}
+
+@include mobile() {
+  .tools {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  @include iconsHoneycomb(10, $scaleFinal: 170%);
+
+  .icons {
+    padding: 3rem 0 1rem 0;
+
+    width: 100%;
+
+    margin-bottom: $positionTop;
+
+    right: 0;
+    top: $positionTop;
+  }
+}

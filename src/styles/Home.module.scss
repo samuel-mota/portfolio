@@ -1,5 +1,6 @@
-@import "./variables.scss";
-@import "./colors.scss";
+@import "./variables";
+@import "./colors";
+@import "./mixins";
 
 .container {
   display: flex;
@@ -8,27 +9,35 @@
 
   flex: 1;
 
-  min-height: 100vh;
+  // min-height: 100vh;
   height: 100vh;
+
+  position: relative;
 
   overflow: auto;
 }
 
+.mainContainer {
+  display: flex;
+
+  height: 100vh;
+  // min-width: 280px;
+  width: 17.5rem;
+
+  color: var(--text);
+  background: var(--about-bg);
+}
+
 .aboutContainer {
   position: relative;
-  padding: 1.5rem;
+  padding: 2rem;
+
+  line-height: 1.6rem;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  min-width: 280px;
-  width: 17.5rem;
-  height: inherit;
-
-  background: var(--about-bg);
-  color: var(--text);
 
   h1 {
     width: 100%;
@@ -38,9 +47,24 @@
 
     color: var(--about-title);
 
-    // img {
-    //   filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
-    // }
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 3.375rem;
+      height: 2.5rem;
+    }
+  }
+
+  p {
+    overflow: auto;
+  }
+
+  .logoAndPhoto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -48,7 +72,7 @@
   display: inline-block;
   width: 10rem;
   // color: red;
-  margin: 20px;
+  margin: 1rem;
   filter: url(#round);
 
   &::before {
@@ -62,18 +86,7 @@
   }
 }
 
-.socialIcons {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  position: absolute;
-  bottom: 2rem;
-
-  width: 100%;
-}
-
-.mainContainer {
+.asideContainer {
   display: flex;
   flex: 3;
   flex-direction: column;
@@ -85,9 +98,150 @@
   overflow: hidden;
 }
 
-// @media (max-width: 600px) {
-//   .grid {
-//     width: 100%;
-//     flex-direction: column;
-//   }
-// }
+.menu,
+.menuOpenButton {
+  display: none;
+}
+
+@include tablet() {
+  .container {
+    flex-direction: column;
+  }
+
+  .hexagone {
+    width: 7rem;
+  }
+
+  .menuCloseButton {
+    display: none;
+  }
+
+  .mainContainer {
+    display: flex;
+    width: 100%;
+    flex: 1;
+
+    position: relative;
+
+    .aboutContainer {
+      flex: 2;
+    }
+
+    .logoAndPhoto {
+      flex-direction: row;
+
+      width: 100%;
+
+      img {
+        width: 80%;
+        min-width: 7rem;
+      }
+    }
+
+    p {
+      height: 10rem;
+    }
+
+    .menu {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+  
+      align-items: center;
+      justify-content: center;
+  
+      background: var(--menu-bg);
+  
+      h2 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+  }
+  
+
+  .asideContainer {
+    width: 100%;
+  }
+}
+
+@include mobile() {
+  .container {
+    height: auto;
+  }
+
+  .menuCloseButton {
+    display: block;
+
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .mainContainer {
+    z-index: 2;
+
+    .logoAndPhoto {
+      flex-direction: column;
+      align-items: center;
+
+      .hexagone {
+        width: 80%;
+      }
+    }
+
+    p {
+      height: 100%;
+    }
+
+    .menuOpenButton {
+      display: block;
+
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+
+    .menu {
+      z-index: 3;
+  
+      position: absolute;
+  
+      right: -27rem;
+      top: 0;
+  
+      width: 100%;
+      height: 100%;
+  
+      transition: right 0.7s;
+    }
+  
+    .menuOpen {
+      right: 0rem;
+    }
+  }
+
+
+  .bgToCloseMenu {
+    opacity: 0;
+    
+    position: fixed;
+    inset: 0;
+    
+    transition: opacity 1s;
+  }
+  
+  .bgToCloseMenuEnable {
+    z-index: 1;
+
+
+    opacity: .5;
+  
+    background: black;
+  }
+
+  .asideContainer {
+    z-index: 0;
+  }
+}

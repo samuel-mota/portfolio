@@ -1,4 +1,4 @@
-import { useDarkMode } from "../../contexts/DarkModeContext";
+import { useDarkMode } from "../../contexts/AppContext";
 import styles from "../../styles/Tools.module.scss";
 import Intro from "../Intro";
 

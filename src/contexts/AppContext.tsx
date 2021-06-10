@@ -11,21 +11,32 @@ interface DarkModeContextData {
   changeDarkModeState: () => void;
 }
 
-interface DarkModeContextProviderProps {
+interface MenuContextData {
+  menuActive: boolean;
+  changeMenuState: () => void;
+}
+
+interface AppContextProviderProps {
   children: ReactNode;
 }
 
 export const DarkModeContext = createContext({} as DarkModeContextData);
+export const MenuContext = createContext({} as MenuContextData);
 
-export default function DarkModeContextProvider({
+export default function AppContextProvider({
   children,
-}: DarkModeContextProviderProps) {
+}: AppContextProviderProps) {
   const [darkMode, setDarkMode] = useState(false);
-  
+  const [menuActive, setMenuActive] = useState(false);
+
   function changeDarkModeState() {
     darkMode ? setDarkMode(false) : setDarkMode(true);
   }
-  
+
+  function changeMenuState() {
+    menuActive ? setMenuActive(false) : setMenuActive(true);
+  }
+
   useEffect(() => {
     setDarkMode(localStorage.getItem("sam_darkMode") === "true");
   }, []);
@@ -40,12 +51,18 @@ export default function DarkModeContextProvider({
 
   return (
     <DarkModeContext.Provider value={{ darkMode, changeDarkModeState }}>
-      {children}
+      <MenuContext.Provider value={{ menuActive, changeMenuState }}>
+        {children}
+      </MenuContext.Provider>
     </DarkModeContext.Provider>
   );
 }
 
-// abstraction to import only the "useDarkMode" hook in the components
+// abstraction to import only the hook in the components
 export const useDarkMode = () => {
   return useContext(DarkModeContext);
+};
+
+export const useMenu = () => {
+  return useContext(MenuContext);
 };

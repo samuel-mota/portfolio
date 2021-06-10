@@ -1,5 +1,5 @@
 import { AppProps } from "next/app";
-import DarkModeContextProvider from "../contexts/DarkModeContext";
+import DarkModeContextProvider from "../contexts/AppContext";
 
 // hack for fontawesome works in next.js
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS

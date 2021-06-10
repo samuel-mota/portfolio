@@ -1,10 +1,39 @@
-@import "./variables.scss";
+@import "./variables";
 
-@mixin overflowBarCorrection($offset: $positionRight) {
-  width: calc(100% + #{$offset});
+/*********
+* QUERIES
+**********/
+@mixin tablet() {
+  @media (max-width: 768px) {
+    @content;
+  }
 }
 
-@mixin iconsHoneycomb($iconsAmount, $rowNumber: 2, $rowWidth: 5.25rem, $columnWidth: 6.25rem, $scaleInitial: 100%, $scaleFinal) {
+@mixin mobile() {
+  @media (max-width: 424px) {
+    @content;
+  }
+}
+
+/*********
+* MIXINS
+**********/
+@mixin overflowBarCorrection() {
+  width: calc(100% + #{$positionRight});
+
+  @include mobile() {
+    width: 100%;
+  }
+}
+
+@mixin iconsHoneycomb(
+  $iconsAmount,
+  $rowNumber: 2,
+  $rowWidth: 5.25rem,
+  $columnWidth: 6.25rem,
+  $scaleInitial: 100%,
+  $scaleFinal
+) {
   $columns: ceil($iconsAmount / 2); // math.ceil
   $minmax: minmax($columnWidth, 62rem / $columns);
 
@@ -45,7 +74,7 @@
         transition: filter 1.3s, transform 0.7s;
 
         &:hover {
-          filter: drop-shadow(0px 0px 3px var(--shadow-style));
+          filter: drop-shadow(0px 0px 2px var(--shadow-style));
           transform: scale($scaleFinal);
         }
       }
@@ -57,6 +86,38 @@
         }
       }
     }
+  }
+
+  @include tablet() {
+    .icons {
+      $scaleReduce: 1rem;
+
+      $minmax: minmax($columnWidth - $scaleReduce, 62rem / $columns);
+
+      @if $rowNumber > 1 {
+        grid-template-columns: repeat($columns, $minmax);
+      } @else {
+        grid-template-columns: repeat($iconsAmount, $columnWidth - $scaleReduce);
+      }
+
+      grid-template-rows: repeat($rowNumber, $rowWidth - $scaleReduce);
+
+      .icon {
+        img {
+          $scaleReduce: 20%;
+
+          transform: scale($scaleInitial - $scaleReduce);
+
+          &:hover {
+            transform: scale($scaleFinal - $scaleReduce);
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile() {
+    
   }
 }
 

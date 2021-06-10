@@ -1,5 +1,6 @@
-@import "./variables.scss";
-@import "./colors.scss";
+@import "./variables";
+@import "./colors";
+@import "./mixins";
 
 $widthContainer: 200px;
 
@@ -19,6 +20,10 @@ $widthContainer: 200px;
   gap: 1rem;
 
   clip-path: polygon(0% 0%, 85% 0, 100% 50%, 85% 100%, 0% 100%);
+
+  // background-image is inline
+  background-repeat: no-repeat;
+  background-position: 90px;
 
   h1 {
     font-size: 2.5rem;
@@ -47,4 +52,26 @@ $widthContainer: 200px;
 .tools {
   background-color: var(--tools-bg);
   color: var(--tools-text);
+}
+
+@include tablet() {
+}
+
+@include mobile() {
+  .shadow {
+    width: 100%;
+  }
+
+  .introContainer {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+
+    clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0% 80%);
+
+    padding: 1rem;
+
+    background-position: 16rem;
+    background-size: 12rem;
+  }
 }
