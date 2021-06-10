@@ -23,7 +23,7 @@
   .icons {
     padding: 3rem 0 1rem 0;
 
-    overflow: unset auto;
+    overflow-x: auto;
 
     width: 100%;
 
@@ -109,6 +109,8 @@
 
   @include tablet() {
     .icons {
+      padding-top: .7rem;
+      padding-bottom: .7rem;
       $scaleReduce: 1rem;
 
       $minmax: minmax($columnWidth - $scaleReduce, 62rem / $columns);

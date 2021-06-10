@@ -78,6 +78,16 @@
 
   .portfolio {
     height: 11.25rem;
+
+    .overlay {
+
+      padding-right: 0.7rem;
+      padding-left: 0.7rem;
+
+      p {
+        margin: 0.4rem;
+      }
+    }
   }
 }
 

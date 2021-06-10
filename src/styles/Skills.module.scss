@@ -17,10 +17,6 @@
 @include iconsHoneycomb(10, $scaleFinal: 170%);
 
 @include tablet() {
-  .icons {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
 }
 
 @include mobile() {
