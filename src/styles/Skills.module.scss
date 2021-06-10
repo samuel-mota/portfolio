@@ -1,6 +1,6 @@
-@import "./variables.scss";
-@import "./mixins.scss";
-@import "./colors.scss";
+@import "./variables";
+@import "./mixins";
+@import "./colors";
 
 .skills {
   flex: 3; // 30% of the screen
@@ -17,25 +17,14 @@
 @include iconsHoneycomb(10, $scaleFinal: 170%);
 
 @include tablet() {
+  .icons {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 @include mobile() {
   .skills {
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-
-    .icons {
-      padding: 3rem 0 1rem 0;
-
-      overflow: unset;
-
-      width: 100%;
-
-      margin-bottom: $positionTop;
-
-      right: 0;
-      top: $positionTop;
-    }
+    @include iconsMobile();
   }
 }

@@ -1,6 +1,6 @@
-@import "./variables.scss";
-@import "./mixins.scss";
-@import "./colors.scss";
+@import "./variables";
+@import "./mixins";
+@import "./colors";
 
 .tools {
   flex: 2; // 20% of the screen
@@ -21,21 +21,9 @@
 
 @include mobile() {
   .tools {
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
+    @include iconsMobile();
   }
 
   @include iconsHoneycomb(10, $scaleFinal: 170%);
 
-  .icons {
-    padding: 3rem 0 1rem 0;
-
-    width: 100%;
-
-    margin-bottom: $positionTop;
-
-    right: 0;
-    top: $positionTop;
-  }
 }

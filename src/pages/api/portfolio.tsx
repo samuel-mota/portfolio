@@ -3,10 +3,9 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
   res.status(200).json([
-    { name: "John Doe", age: 20 },
-    { name: "Samuel Mota", age: 37 },
-    { name: "Samuel Mota1", age: 37 },
-    { name: "Samuel Mota2", age: 37 },
-    { name: "Samuel Mota3", age: 37 },
+    { name: "This Portfolio", repo: "portfolio", projectLink: "", githubLink: "" },
+    { name: "Biblicamentes", repo: "Biblicamentes", projectLink: "", githubLink: "" },
+    { name: "Happy", repo: "happy-project", projectLink: "", githubLink: "" },
+    { name: "MoveIt", repo: "moveit-project", projectLink: "", githubLink: "" },
   ]);
 };

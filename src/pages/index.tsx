@@ -1,9 +1,9 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import Image from "next/image"; // it doesnt work with svg
 
 import styles from "../styles/Home.module.scss";
 
+import { api } from "../services/api";
 import DarkModeButton from "../components/DarkModeButton";
 import { useDarkMode, useMenu } from "../contexts/AppContext";
 
@@ -12,7 +12,12 @@ import Skills from "../components/Skills";
 import Tools from "../components/Tools";
 import SocialIcons from "../components/SocialIcons";
 
-export default function Home() {
+interface PortfoliosProps {
+  portfolios: [];
+  languages: [];
+}
+
+export default function Home({ portfolios, languages }: PortfoliosProps) {
   const { darkMode } = useDarkMode();
   const { menuActive, changeMenuState } = useMenu();
 
@@ -22,7 +27,11 @@ export default function Home() {
         <title>Samuel Mota DEV</title>
       </Head>
 
-      <main className={styles.mainContainer}>
+      <main
+        className={`${styles.mainContainer} ${
+          menuActive && styles.mainContainerClosed
+        }`}
+      >
         <div className={styles.aboutContainer}>
           <DarkModeButton media="desktop" />
 
@@ -97,7 +106,7 @@ export default function Home() {
           />
         </button>
 
-        <nav className={`${styles.menu} ${menuActive && styles.menuOpen}`}>
+        <nav className={styles.menu}>
           <DarkModeButton media="mobile" />
 
           <button
@@ -118,10 +127,15 @@ export default function Home() {
         </nav>
       </main>
 
-      <div className={`${styles.bgToCloseMenu} ${menuActive && styles.bgToCloseMenuEnable}`} onClick={changeMenuState}></div>
+      <div
+        className={`${styles.bgToCloseMenu} ${
+          menuActive && styles.bgToCloseMenuEnable
+        }`}
+        onClick={changeMenuState}
+      ></div>
 
       <aside className={styles.asideContainer}>
-        <Portfolio />
+        <Portfolio languages={languages} portfolios={portfolios} />
         <Skills />
         <Tools />
       </aside>
@@ -129,8 +143,51 @@ export default function Home() {
   );
 }
 
-// export const getStaticProps: GetStaticProps = async (context) => {
-//   return {
-//     props: {}, // will be passed to the page component as props
-//   };
-// };
+export const getStaticProps: GetStaticProps = async (context) => {
+  const portfolios = [
+    {
+      key: 0,
+      repo: "portfolio",
+      picture: "/assets/images/samuel-mota.jpg",
+      projectLink: "https://samuelmota.dev",
+    },
+    {
+      key: 1,
+      repo: "biblicamentes",
+      picture: "/assets/images/samuel-mota.jpg",
+      projectLink: "https://sandboxsam.ml/",
+    },
+    {
+      key: 2,
+      repo: "moveit-project",
+      picture: "/assets/images/samuel-mota.jpg",
+      projectLink: "https://moveit-project-samuel-mota.vercel.app/",
+    },
+    {
+      key: 3,
+      repo: "project-sds-vendas",
+      picture: "/assets/images/samuel-mota.jpg",
+      projectLink: "https://project-vendas.netlify.app/",
+    },
+    {
+      key: 4,
+      repo: "imersao-react-next-alura",
+      picture: "/assets/images/samuel-mota.jpg",
+      projectLink: "https://imersao-react-next-alura-psi.vercel.app/",
+    },
+  ];
+
+  const languages = [];
+
+  for (let i = 0; i < portfolios.length; i++) {
+    const { data } = await api.get(`${portfolios[i].repo}/languages`);
+    languages[i] = { ...data };
+  }
+
+  return {
+    props: {
+      portfolios,
+      languages,
+    }, // will be passed to the page component as props
+  };
+};

@@ -25,15 +25,13 @@ $widthContainer: 200px;
   background-repeat: no-repeat;
   background-position: 90px;
 
-  h1 {
-    font-size: 2.5rem;
-
+  h2 {
     // to force correction, it is get bigger than the container
     width: $widthContainer;
     text-align: center;
 
     &::first-letter {
-      font-size: 3rem;
+      font-size: 2.7rem;
       text-transform: uppercase;
     }
   }

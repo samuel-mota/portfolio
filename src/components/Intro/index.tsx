@@ -24,7 +24,7 @@ const Intro = ({ title }: IntroProps) => {
             darkMode ? "dark" : "light"}.svg`}
           alt={`${title} icon`}
         />
-        <h1>{title}</h1>
+        <h2>{title}</h2>
       </div>
     </div>
   );
