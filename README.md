@@ -5,7 +5,7 @@
 
 
 <p align="center">
-  <img src="https://i.ibb.co/zSXLFPX/Samuel-Mota-DEV.gif" width="500px" />  
+  <img src="https://i.ibb.co/L9fGv3k/Samuel-Mota-DEV-1.gif" width="500px" />  
 <!-- ![Preview](https://i.ibb.co/mywwmZf/Inicio-move-it.gif) -->
 </p>
 <hr>
