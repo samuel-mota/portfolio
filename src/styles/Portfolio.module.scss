@@ -29,9 +29,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 auto;
+  flex: 1;
 
-  width: 13rem;
+  min-width: 13rem;
   height: 100%;
 
   // for image background
@@ -72,12 +72,8 @@
 }
 
 @include tablet() {
-  .container {
-    height: 100%;
-  }
-
   .portfolio {
-    height: 11.25rem;
+    min-height: 11.25rem;
 
     .overlay {
 

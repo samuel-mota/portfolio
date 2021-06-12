@@ -1,8 +1,8 @@
 // *****************************************
 // light colors on globals.scss - :root{...}
 // *****************************************
-  $portfolio-bg: #f9b18b;
-  $portfolio-text: #9b2e12;
+$portfolio-bg: #f9b18b;
+$portfolio-text: #9b2e12;
 
 .dark {
   --gray1: #f2f2f2;
@@ -11,24 +11,28 @@
   --gray4: #828282;
   --gray5: #4f4f4f;
   --gray6: #333333;
-  
-  --shadow-style: rgba(50,50,0,.2);
-  
+
+  --shadow-style: rgba(50, 50, 0, 0.2);
+
   --text: #f2f2f2;
   --about-bg: linear-gradient(180deg, #684f13 61.12%, #857140 100%);
   --menu-bg: linear-gradient(0deg, #684f13 61.12%, #857140 100%);
   --about: #684f13;
   --about-title: #ffee93;
-  
+
   --portfolio-text: #f9b18b;
   --portfolio-bg: #9b2e12;
-  --portfolio-secondary: #5E1300;
-  
+  --portfolio-secondary: #5e1300;
+
   --skills-text: #adf7b6;
   --skills-bg: #0d6918;
-  --skills-secondary: #27432A;
-  
+  --skills-secondary: #27432a;
+
   --tools-text: #a7d3de;
   --tools-bg: #14667a;
   --tools-secondary: #224751;
+
+  --scrollbar-track: rgba(255, 255, 255, 0.1);
+  --scrollbar-thumb: rgb(255, 239, 148);
+  --scrollbar-thumb-hover: rgb(185, 174, 107);
 }

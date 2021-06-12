@@ -38,7 +38,7 @@ a {
   color: inherit;
   text-decoration: none;
 
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     font-weight: 700;
@@ -53,6 +53,27 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+}
+
+// custom scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 50px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
 }
 
 :root {
@@ -82,4 +103,8 @@ button {
   --tools-text: #14667a;
   --tools-bg: #a7d3de;
   --tools-secondary: #deebee;
+
+  --scrollbar-track: rgba(0, 0, 0, 0.1);
+  --scrollbar-thumb: rgb(104, 79, 19);
+  --scrollbar-thumb-hover: rgb(104, 79, 19);
 }

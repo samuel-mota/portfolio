@@ -1,11 +1,6 @@
-import { useEffect, useState } from "react";
-import usePortfolios from "../getPortfolios";
-
 import Intro from "../Intro";
 
 import styles from "../../styles/Portfolio.module.scss";
-import { GetStaticProps } from "next";
-import { api } from "../../services/api";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
