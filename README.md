@@ -13,11 +13,11 @@
 ## 🚀 About
 > 🚀 *Sobre*
 
->Hello! My name is Samuel, I have done this portfolio inspired by the series I like the most, Star Wars, you may realize that when you switch to dark mode (or should I say, Dark Side 😃) all the icons follow this change. I hope you enjoy... **May the Force be with you!**
+Hello! My name is Samuel, I have done this portfolio inspired by the series I like the most, Star Wars, you may realize that when you switch to dark mode (or should I say, Dark Side 😃) all the icons follow this change. I hope you enjoy... **May the Force be with you!**
 
 ---
 
->Olá! Meu nome é Samuel, fiz esse portfólio inspirado na série que mais gosto, Star Wars, você pode perceber que quando muda para o dark mode (ou devo dizer, Lado Negro da Força 😃) todos os ícones seguem essa mudança. Espero que você goste... **Que a Força esteja com você!**
+Olá! Meu nome é Samuel, fiz esse portfólio inspirado na série que mais gosto, Star Wars, você pode perceber que quando muda para o dark mode (ou devo dizer, Lado Negro da Força 😃) todos os ícones seguem essa mudança. Espero que você goste... **Que a Força esteja com você!**
 
 <hr>
 
@@ -64,13 +64,12 @@ http://localhost:3000
 
 ## ⚙️ Application Features
 > ⚙️ *Funcionalidades da Aplicação*
-<details>
-<summary>Click to expand (<em>Clique para expandir</em>)</summary>
+
 - Dark Mode or Dark Side (*Dark Mode ou Lado Negro da Força*) 
 	<p align="center"><img src="https://i.ibb.co/9w6RVMh/Samuel-Mota-DEV-darkmode.gif" alt="level changing" width="500px" /></p>
 - Responsiveness (*Responsivo*) 
 	<p align="center"><img src="https://i.ibb.co/y0fg0rX/Samuel-Mota-DEV-responsive.gif" alt="responsive" width="500px" /></p>
-</details>
+
 <hr>
 
 ## 🔥 Tasks
@@ -114,7 +113,7 @@ Contributions, issues and feature requests are welcome! Follow these steps: (*Co
 ## 📝 License
 > 📝 *Licença*
 
-This project is under MIT license. See more (*Este projeto está sob a licença MIT, veja mais*) [LICENSE](https://github.com/samuel-mota/PROJECT-NAME/blob/main/LICENSE)
+This project is under MIT license (*Este projeto está sob a licença MIT*)
 
 ---
 
