@@ -30,10 +30,6 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Samuel Mota DEV</title>
-      </Head>
-
       <main
         className={`${styles.mainContainer} ${
           menuActive && styles.mainContainerClosed
