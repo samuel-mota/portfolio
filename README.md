@@ -1,42 +1,126 @@
-TODO:
-- CORRECT OVERFLOW WHEN HEIGHT IS DECREASED
-- CHECK IF ICONS SVG MAY BE TRANSFORMED WHEN CHANGE DARK MODE
-- add LOADING page to eliminate FOUC
-- create mixin for positioning skills/tools icons
-- *** change about text ***
-- *** make responsive *** OK
+<!-- SHIELDS EXAMPLE [![License: mit](https://img.shields.io/badge/License-mit-yellow.svg)](https://github.com/samuel-mota/PROJECT-NAME/blob/main/LICENSE) -->
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 👋 Welcome to my Portfolio
+> 👋 *Bem Vindo ao meu Portfolio*
 
-## Getting Started
 
-First, run the development server:
+<p align="center">
+  <img src="https://i.ibb.co/XyztsFs/Samuel-Mota-DEV.gif" alt="preview" width="500px" />  
+<!-- ![Preview](https://i.ibb.co/mywwmZf/Inicio-move-it.gif) -->
+</p>
+<hr>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 🚀 About
+> 🚀 *Sobre*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+>Hello! My name is Samuel, I have done this portfolio inspired by the series I like the most, Star Wars, you may realize that when you switch to dark mode (or should I say, Dark Side 😃) all the icons follow this change. I hope you enjoy... **May the Force be with you!**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+>Olá! Meu nome é Samuel, fiz esse portfólio inspirado na série que mais gosto, Star Wars, você pode perceber que quando muda para o dark mode (ou devo dizer, Lado Negro da Força 😃) todos os ícones seguem essa mudança. Espero que você goste... **Que a Força esteja com você!**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<hr>
 
-## Learn More
+## 👁️ Preview
+> 👁️ *Visualizar*
 
-To learn more about Next.js, take a look at the following resources:
+https://samuelmota.dev/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<hr>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🛠️ Technologies and Tools
+> *Tecnologias e Ferramentas*
 
-## Deploy on Vercel
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=fff)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=fff)
+![SASS](https://img.shields.io/badge/-Sass-CC6699?style=flat&logo=sass&logoColor=fff)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=000)
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=000)
+![NextJS](https://img.shields.io/badge/-NextJS-000000?style=flat&logo=next-dot-js&logoColor=fff)
+![TypeScript](https://img.shields.io/badge/-Typescript-3178C6?style=flat&logo=typescript&logoColor=fff)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Figma](https://img.shields.io/badge/-Figma-F24E1E?style=flat&logo=Figma&logoColor=fff)
+![Vercel](https://img.shields.io/badge/-Vercel-000000?style=flat&logo=vercel&logoColor=fff)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+<hr>
+
+## 🏁 Getting Started
+> *Iniciando o projeto*
+
+1. Clone the project (*Faça o clone do projeto*)
+2. Install dependencies (*Instale as dependencias*)
+	```bash
+	$ yarn
+	```
+3. Run server (*Rode o server*)
+	```bash
+	$ yarn dev
+	```
+4. Open the browser at the address: (*Abra o navegador no endereço:*)
+http://localhost:3000
+
+<hr>
+
+## ⚙️ Application Features
+> ⚙️ *Funcionalidades da Aplicação*
+<details>
+<summary>Click to expand (<em>Clique para expandir</em>)</summary>
+- Dark Mode or Dark Side (*Dark Mode ou Lado Negro da Força*) 
+	<p align="center"><img src="https://i.ibb.co/9w6RVMh/Samuel-Mota-DEV-darkmode.gif" alt="level changing" width="500px" /></p>
+- Responsiveness (*Responsivo*) 
+	<p align="center"><img src="https://i.ibb.co/y0fg0rX/Samuel-Mota-DEV-responsive.gif" alt="responsive" width="500px" /></p>
+</details>
+<hr>
+
+## 🔥 Tasks
+> 🔥 *Tarefas*
+<details>
+<summary>Click to expand (<em>Clique para expandir</em>)</summary>
+
+- [ ] Add more information in the Skills and Tools icons
+- [ ] Localization (PT/ES)
+- [x] Dark Theme 
+- [x] Responsiveness
+
+</details>
+<hr>
+
+## 🤝 Contributing
+> 🤝 *Contribuições*
+<details>
+<summary>Click to expand (<em>Clique para expandir</em>)</summary>
+Contributions, issues and feature requests are welcome! Follow these steps: (*Contribuições, problemas e solicitações de funcionalidades são bem-vindas! Siga os passos:*)
+
+1. **Fork** this project (***Fork** este projeto*)
+2. On your code editor terminal: (*No terminal do seu editor de código*)
+	1. Create a branch with your feature: (*Crie uma branch para a nova funcionalidade:*)
+	```bash
+	$ git checkout -b feature
+	```
+	2. Commit your changes: (*Commit suas alterações:*)
+	```bash
+	$ git commit -am "add new feature"
+	```
+	3. Push your branch: (*Push sua branch:*)
+	```bash
+	$ git push origin my-feature
+	```
+3. Create a new **Pull Request** (*Crie uma nova **Pull Request***)
+4. After your pull request is merged, you can safely **delete your branch**. (*Após seu pull request estiver com status merged, você pode **deletar sua branch** com segurança.*)
+</details>
+<hr>
+
+## 📝 License
+> 📝 *Licença*
+
+This project is under MIT license. See more (*Este projeto está sob a licença MIT, veja mais*) [LICENSE](https://github.com/samuel-mota/PROJECT-NAME/blob/main/LICENSE)
+
+---
+
+<p align="center">
+⭐ If this project helped you in any way, consider contributing with starring.<br>
+⭐ <em>(Se este projeto te ajudou de alguma forma, considere contribuir com uma estrela).</em><br>
+Made with 💛 by Samuel Mota<br>
+<em>(Feito com 💛 por Samuel Mota)
+</p>
