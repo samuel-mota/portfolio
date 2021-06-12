@@ -20,7 +20,7 @@ class MyDocument extends Document {
           <meta property="og:url" content="https://samuelmota.dev" />
           <meta
             property="og:image"
-            content="https://samuelmota.dev/assets/sam-dev-logo-official.png"
+            content="https://samuelmota.dev/assets/portfolio-samuelmota.jpg"
           />
           <meta
             property="og:description"
