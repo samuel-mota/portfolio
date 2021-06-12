@@ -121,6 +121,10 @@
 
     .aboutContainer {
       flex: 2;
+
+      p {
+        margin-bottom: 0;
+      }
     }
 
     .logoAndPhoto {
@@ -159,7 +163,7 @@
   .asideContainer {
     width: 100%;
 
-    min-height: 27.75rem;
+    min-height: 29.75rem;
   }
 }
 

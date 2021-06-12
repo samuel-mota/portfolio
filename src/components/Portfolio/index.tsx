@@ -77,7 +77,7 @@ const Portfolio = ({ portfolios, languages }: PortfoliosProps) => {
                 </p>
                 <p>
                   <small>
-                    <strong>Languages used:</strong>{" "}
+                    <strong>Technologies:</strong>{" "}
                     {Object.keys(languages[key]).join(", ")}
                   </small>
                 </p>
