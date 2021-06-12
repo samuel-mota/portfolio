@@ -65,6 +65,7 @@ button {
 /* Track */
 ::-webkit-scrollbar-track {
   background: var(--scrollbar-track);
+  border-radius: 50px;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
