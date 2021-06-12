@@ -22,6 +22,10 @@
 .containerTablet {
   display: none;
 
+  @include mobile() {
+    font-size: larger;
+  }
+
   @include tablet() {
     display: flex;
     flex-direction: column;

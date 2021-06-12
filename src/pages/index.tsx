@@ -12,8 +12,15 @@ import Skills from "../components/Skills";
 import Tools from "../components/Tools";
 import SocialIcons from "../components/SocialIcons";
 
+interface PortfolioData {
+  key: number;
+  repo: string;
+  picture: string;
+  projectLink: string;
+  tech: {};
+}
 interface PortfoliosProps {
-  portfolios: [];
+  portfolios: PortfolioData[];
   languages: [];
 }
 
@@ -80,23 +87,28 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
           </h1>
 
           <p>
-            Hello! My name is <strong>Samuel</strong> and I am a self taught multilingual
-            professional with wide experiences in positions from different
-            areas. The reason I have decided to follow this path is simple: <strong>I
-            love technology</strong>. I got my first PC when I was 9 years old, since
-            then I am always connected to this world.
+            Hello! My name is <strong>Samuel</strong> and I am a self taught
+            multilingual professional with wide experiences in positions from
+            different areas. The reason I have decided to follow this path is
+            simple: <strong>I love technology</strong>. I got my first PC when I
+            was 9 years old, since then I am always connected to this world.
             <br />
             <br />
-            About 4 years ago I definitely started my studies in this area. <strong>I
-            know that knowledge doesn't stop, so I'm always learning</strong>. I did some
-            personal projects in order to get more knowledge (using technologies
-            like <strong>HTML, CSS, JS, ReactJS, PHP, MySQL</strong> and others) before starting
-            a Computer Science college. I feel more confident in this field now
-            and am looking forward to absorbing more knowledge and adding up all
-            my distinct capabilities.
+            About 4 years ago I definitely started my studies in this area.{" "}
+            <strong>
+              I know that knowledge doesn't stop, so I'm always learning
+            </strong>
+            . I did some personal projects in order to get more knowledge (using
+            technologies like{" "}
+            <strong>HTML, CSS, JS, ReactJS, PHP, MySQL</strong> and others)
+            before starting a Computer Science college. I feel more confident in
+            this field now and am looking forward to absorbing more knowledge
+            and adding up all my distinct capabilities.
             <br />
             <br />
-            <strong><em>May the force be with you!</em></strong>
+            <strong>
+              <em>May the force be with you!</em>
+            </strong>
           </p>
 
           <SocialIcons media="desktop" />
@@ -159,38 +171,52 @@ export const getStaticProps: GetStaticProps = async (context) => {
       repo: "portfolio",
       picture: "/assets/images/samuel-mota.jpg",
       projectLink: "https://samuelmota.dev",
+      tech: { "React.JS": 0, "Next.JS": 0 },
     },
     {
       key: 1,
       repo: "biblicamentes",
       picture: "/assets/images/samuel-mota.jpg",
       projectLink: "https://sandboxsam.ml/",
+      tech: { MySQL: 0 },
     },
     {
       key: 2,
       repo: "moveit-project",
       picture: "/assets/images/samuel-mota.jpg",
       projectLink: "https://moveit-project-samuel-mota.vercel.app/",
+      tech: { "React.JS": 0, "Next.JS": 0 },
     },
     {
       key: 3,
       repo: "project-sds-vendas",
       picture: "/assets/images/samuel-mota.jpg",
       projectLink: "https://project-vendas.netlify.app/",
+      tech: { "Spring": 0 },
     },
     {
       key: 4,
       repo: "imersao-react-next-alura",
       picture: "/assets/images/samuel-mota.jpg",
       projectLink: "https://imersao-react-next-alura-psi.vercel.app/",
+      tech: {},
     },
   ];
 
   const languages = [];
 
-  for (let i = 0; i < portfolios.length; i++) {
-    const { data } = await api.get(`${portfolios[i].repo}/languages`);
-    languages[i] = { ...data };
+  portfolios[0].tech;
+
+  try {
+    for (let i = 0; i < portfolios.length; i++) {
+      const { data } = await api.get(`${portfolios[i].repo}/languages`);
+      languages[i] = { ...data, ...portfolios[i].tech };
+    }
+  } catch (error) {
+    for (let i = 0; i < portfolios.length; i++) {
+      languages[i] = { ...portfolios[i].tech };
+    }
+    console.log("ERROR:", error);
   }
 
   return {
@@ -198,5 +224,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       portfolios,
       languages,
     }, // will be passed to the page component as props
+    revalidate: 60 * 60, // call the api to update the data once an hour
   };
 };
