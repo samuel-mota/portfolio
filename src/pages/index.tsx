@@ -130,7 +130,7 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
             />
           </button>
 
-          <h2>Contact me</h2>
+          <h2>{t("contact_me")}</h2>
           <SocialIcons media="tablet" />
         </nav>
       </main>

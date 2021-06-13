@@ -121,6 +121,7 @@
 
     .aboutContainer {
       flex: 2;
+      padding: 2rem 1.3rem 2rem 1.3rem;
 
       p {
         margin-bottom: 0;
@@ -154,8 +155,11 @@
 
       h2 {
         margin-bottom: 2rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
         font-size: 2rem;
         text-align: center;
+        white-space: nowrap;
       }
     }
   }
