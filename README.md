@@ -26,6 +26,8 @@ Olá! Meu nome é Samuel, fiz esse portfólio inspirado na série que mais gosto
 
 https://samuelmota.dev/
 
+[![Figma](https://img.shields.io/badge/-Figma-F24E1E?style=flat&logo=Figma&logoColor=fff)](https://www.figma.com/file/Po4uz7EMeUmUa0v7Kp4emy/Portfolio?node-id=0%3A1)
+
 <hr>
 
 ## 🛠️ Technologies and Tools
@@ -39,7 +41,6 @@ https://samuelmota.dev/
 ![NextJS](https://img.shields.io/badge/-NextJS-000000?style=flat&logo=next-dot-js&logoColor=fff)
 ![TypeScript](https://img.shields.io/badge/-Typescript-3178C6?style=flat&logo=typescript&logoColor=fff)
 
-![Figma](https://img.shields.io/badge/-Figma-F24E1E?style=flat&logo=Figma&logoColor=fff)
 ![Vercel](https://img.shields.io/badge/-Vercel-000000?style=flat&logo=vercel&logoColor=fff)
 
 
@@ -78,7 +79,8 @@ http://localhost:3000
 <summary>Click to expand (<em>Clique para expandir</em>)</summary>
 
 - [ ] Add more information in the Skills and Tools icons
-- [ ] Localization (PT/ES)
+- [ ] Add tooltips
+- [x] Localization (PT/EN)
 - [x] Dark Theme 
 - [x] Responsiveness
 

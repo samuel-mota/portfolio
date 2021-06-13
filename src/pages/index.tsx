@@ -1,16 +1,20 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
+import { Translate } from "next-translate";
 
 import styles from "../styles/Home.module.scss";
 
 import { api } from "../services/api";
 import DarkModeButton from "../components/DarkModeButton";
 import { useDarkMode, useMenu } from "../contexts/AppContext";
+import useTranslation from "next-translate/useTranslation";
 
 import Portfolio from "../components/Portfolio";
 import Skills from "../components/Skills";
 import Tools from "../components/Tools";
 import SocialIcons from "../components/SocialIcons";
+import LocalSwitch from "../components/LocalSwitch";
+import { useRouter } from "next/router";
 
 interface PortfolioData {
   key: number;
@@ -28,8 +32,16 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
   const { darkMode } = useDarkMode();
   const { menuActive, changeMenuState } = useMenu();
 
+  // const router = useRouter();
+  // const { locale } = useRouter();
+  const { t, lang } = useTranslation("common");
+
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Samuel Mota | Portfolio</title>
+      </Head>
+
       <main
         className={`${styles.mainContainer} ${
           menuActive && styles.mainContainerClosed
@@ -37,6 +49,7 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
       >
         <div className={styles.aboutContainer}>
           <DarkModeButton media="desktop" />
+          <LocalSwitch lang={lang} />
 
           <div className={styles.logoAndPhoto}>
             <img
@@ -71,7 +84,7 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
           </div>
 
           <h1>
-            About me
+            {t("about_me")}
             <span>
               <img
                 src={`/assets/icons/spaceship-${
@@ -82,30 +95,7 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
             </span>
           </h1>
 
-          <p>
-            Hello! My name is <strong>Samuel</strong> and I am a self taught
-            multilingual professional with wide experiences in positions from
-            different areas. The reason I have decided to follow this path is
-            simple: <strong>I love technology</strong>. I got my first PC when I
-            was 9 years old, since then I am always connected to this world.
-            <br />
-            <br />
-            About 4 years ago I definitely started my studies in this area.{" "}
-            <strong>
-              I know that knowledge doesn't stop, so I'm always learning
-            </strong>
-            . I did some personal projects in order to get more knowledge (using
-            technologies like{" "}
-            <strong>HTML, CSS, JS, ReactJS, PHP, MySQL</strong> and others)
-            before starting a Computer Science college. I feel more confident in
-            this field now and am looking forward to absorbing more knowledge
-            and adding up all my distinct capabilities.
-            <br />
-            <br />
-            <strong>
-              <em>May the force be with you!</em>
-            </strong>
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: t("about_me_description") }} />
 
           <SocialIcons media="desktop" />
         </div>
@@ -125,6 +115,7 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
 
         <nav className={styles.menu}>
           <DarkModeButton media="mobile" />
+          <LocalSwitch lang={lang} media="mobile" />
 
           <button
             type="button"
@@ -152,7 +143,10 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
       ></div>
 
       <aside className={styles.asideContainer}>
-        <Portfolio languages={languages} portfolios={portfolios} />
+        <Portfolio
+          languages={languages}
+          portfolios={portfolios}
+        />
         <Skills />
         <Tools />
       </aside>
@@ -188,7 +182,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       repo: "project-sds-vendas",
       picture: "/assets/images/samuel-mota.jpg",
       projectLink: "https://project-vendas.netlify.app/",
-      tech: { "Spring": 0 },
+      tech: { Spring: 0 },
     },
     {
       key: 4,

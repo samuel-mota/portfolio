@@ -1,6 +1,7 @@
-import Intro from "../Intro";
+import useTranslation from "next-translate/useTranslation";
 
 import styles from "../../styles/Portfolio.module.scss";
+import Intro from "../Intro";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
@@ -31,6 +32,7 @@ const Portfolio = ({ portfolios, languages }: PortfoliosProps) => {
   //     setHasData(false);
   //   } else setHasData(true);
   // }, [isError, isLoading]);
+    const { t } = useTranslation("common");
 
   return (
     <div className={styles.container}>
@@ -50,7 +52,9 @@ const Portfolio = ({ portfolios, languages }: PortfoliosProps) => {
               />
               <div className={styles.overlay}>
                 {repo === "portfolio" ? (
-                  <h3>this {repo}</h3>
+                  <h3>
+                    {t("this")} {repo}
+                  </h3>
                 ) : (
                   <>
                     <h3>{repo}</h3>
@@ -60,7 +64,7 @@ const Portfolio = ({ portfolios, languages }: PortfoliosProps) => {
                         target="_blank"
                         rel="nofollow noreferrer noopener"
                       >
-                        Project link{" "}
+                        Website link{" "}
                         <FontAwesomeIcon icon={faExternalLinkAlt} />
                       </a>
                     </p>
@@ -77,7 +81,7 @@ const Portfolio = ({ portfolios, languages }: PortfoliosProps) => {
                 </p>
                 <p>
                   <small>
-                    <strong>Technologies:</strong>{" "}
+                    <strong>{t("technologies")}</strong>{" "}
                     {Object.keys(languages[key]).join(", ")}
                   </small>
                 </p>

@@ -3,9 +3,7 @@
 @import "./mixins";
 
 .container {
-  $btnWidth: 5.125rem; // 90px
-
-  width: $btnWidth;
+  width: $darkModeBtnWidth;
 
   z-index: 100; // to be above the intro component
 
@@ -13,12 +11,19 @@
   justify-content: space-evenly;
   
   position: absolute;
-  right: -$btnWidth / 2; // center the button
+  right: -$darkModeBtnWidth / 2; // center the button
   top: 0.2rem;
 
   background-color: var(--gray1);
   box-shadow: 0px 0px 3px var(--shadow-style);
   border-radius: 50px;
+
+  transition: filter .2s;
+
+  
+  &:hover {
+    filter: brightness(120%);
+  }
 
   .icons {
     margin: 0.2rem;

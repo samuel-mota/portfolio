@@ -16,8 +16,18 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Samuel Mota | Portfolio</title>
           <meta charSet="utf-8" />
+          <link rel="alternate" hrefLang="en" href="https://samuelmota.dev/" />
+          <link
+            rel="alternate"
+            hrefLang="pt"
+            href="https://samuelmota.dev/pt"
+          />
+          <link
+            rel="alternate"
+            hrefLang="x-default"
+            href="https://samuelmota.dev/"
+          />
           <meta property="og:url" content="https://samuelmota.dev" />
           <meta
             property="og:image"

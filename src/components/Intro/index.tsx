@@ -1,3 +1,5 @@
+import useTranslation from "next-translate/useTranslation";
+
 import { useDarkMode } from "../../contexts/AppContext";
 import styles from "../../styles/Intro.module.scss";
 
@@ -7,6 +9,7 @@ interface IntroProps {
 
 const Intro = ({ title }: IntroProps) => {
   const { darkMode } = useDarkMode();
+  const { t } = useTranslation("common");
 
   return (
     <div className={styles.shadow}>
@@ -16,15 +19,15 @@ const Intro = ({ title }: IntroProps) => {
           backgroundImage: `url("./assets/icons/${title}-bg-${
             darkMode ? "dark" : "light"
           }.svg")`,
-          
         }}
       >
         <img
           src={`./assets/icons/${title}-icon-${
-            darkMode ? "dark" : "light"}.svg`}
+            darkMode ? "dark" : "light"
+          }.svg`}
           alt={`${title} icon`}
         />
-        <h2>{title}</h2>
+        <h2>{t(title)}</h2>
       </div>
     </div>
   );

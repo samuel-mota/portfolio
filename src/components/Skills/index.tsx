@@ -1,3 +1,5 @@
+import { Translate } from "next-translate";
+
 import { useDarkMode } from "../../contexts/AppContext";
 import styles from "../../styles/Skills.module.scss";
 import Intro from "../Intro";
@@ -8,7 +10,7 @@ const Skills = () => {
   return (
     <div className={styles.skills}>
       <Intro title="skills" />
-      
+
       <div className={styles.icons}>
         <div className={styles.icon}>
           <img
@@ -29,16 +31,27 @@ const Skills = () => {
           <img src="/assets/icons/skills-icons/html-icon.svg" alt="html icon" />
         </div>
         <div className={styles.icon}>
-          <img src="/assets/icons/skills-icons/react-icon.svg" alt="react icon" />
+          <img
+            src="/assets/icons/skills-icons/react-icon.svg"
+            alt="react icon"
+          />
         </div>
         <div className={styles.icon}>
-          <img src={`/assets/icons/skills-icons/next-icon-${darkMode ? "dark" : "light"}.svg`} alt="next icon" />
+          <img
+            src={`/assets/icons/skills-icons/next-icon-${
+              darkMode ? "dark" : "light"
+            }.svg`}
+            alt="next icon"
+          />
         </div>
         <div className={styles.icon}>
           <img src="/assets/icons/skills-icons/sass-icon.svg" alt="sass icon" />
         </div>
         <div className={styles.icon}>
-          <img src="/assets/icons/skills-icons/bootstrap-icon.svg" alt="bootstrap icon" />
+          <img
+            src="/assets/icons/skills-icons/bootstrap-icon.svg"
+            alt="bootstrap icon"
+          />
         </div>
       </div>
     </div>
