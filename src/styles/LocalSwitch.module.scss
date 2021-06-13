@@ -51,6 +51,9 @@
     inset: 0;
     justify-content: center;
     flex-direction: row;
+    height: fit-content;
+
+    z-index: 0;
 
     a {
       margin-top: 0.2rem;
