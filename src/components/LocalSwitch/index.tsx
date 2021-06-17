@@ -7,8 +7,13 @@ interface LocalSwitchProps {
 }
 
 export default function LocalSwitch({ lang, media }: LocalSwitchProps) {
+
   return (
-    <div className={`${styles.container} ${media === "mobile" && styles.containerMobile}`}>
+    <div
+      className={`${styles.container} ${
+        media === "mobile" && styles.containerMobile
+      }`}
+    >
       <Link href="/" locale="pt">
         <a className={`${styles.pt} ${lang !== "pt" && styles.disabled}`}>pt</a>
       </Link>

@@ -1,6 +1,7 @@
+import { useEffect } from "react";
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import { Translate } from "next-translate";
+import { useRouter } from "next/router";
 
 import styles from "../styles/Home.module.scss";
 
@@ -8,13 +9,13 @@ import { api } from "../services/api";
 import DarkModeButton from "../components/DarkModeButton";
 import { useDarkMode, useMenu } from "../contexts/AppContext";
 import useTranslation from "next-translate/useTranslation";
+import setLanguage from "next-translate/setLanguage";
 
 import Portfolio from "../components/Portfolio";
 import Skills from "../components/Skills";
 import Tools from "../components/Tools";
 import SocialIcons from "../components/SocialIcons";
 import LocalSwitch from "../components/LocalSwitch";
-import { useRouter } from "next/router";
 
 interface PortfolioData {
   key: number;
@@ -32,9 +33,20 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
   const { darkMode } = useDarkMode();
   const { menuActive, changeMenuState } = useMenu();
 
-  // const router = useRouter();
-  // const { locale } = useRouter();
   const { t, lang } = useTranslation("common");
+
+  // persist locale cookie
+  const { locale, defaultLocale } = useRouter();
+
+  //https://www.npmjs.com/package/next-translate
+  useEffect(() => {
+    if (locale !== defaultLocale) {
+      const date = new Date();
+      const expireMs = 100 * 365 * 24 * 60 * 60 * 1000; // 100 days
+      date.setTime(date.getTime() + expireMs);
+      document.cookie = `NEXT_LOCALE=${locale};expires=${date.toUTCString()};path=/pt`;
+    }
+  }, [locale, defaultLocale]);
 
   return (
     <div className={styles.container}>
@@ -143,10 +155,7 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
       ></div>
 
       <aside className={styles.asideContainer}>
-        <Portfolio
-          languages={languages}
-          portfolios={portfolios}
-        />
+        <Portfolio languages={languages} portfolios={portfolios} />
         <Skills />
         <Tools />
       </aside>

@@ -29,7 +29,7 @@ const Portfolio = ({ portfolios, languages }: PortfoliosProps) => {
       else if (e.deltaY <= 0 && scroll >= 0) setScroll(scroll - 100);
 
     refContainer.current.scrollLeft = scroll;
-    console.log(scroll);
+    // console.log(scroll);
   }
 
   return (

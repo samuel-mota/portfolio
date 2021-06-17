@@ -1,5 +1,5 @@
 import { AppProps } from "next/app";
-import DarkModeContextProvider from "../contexts/AppContext";
+import AppContext from "../contexts/AppContext";
 
 // hack for fontawesome works in next.js
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
@@ -10,9 +10,9 @@ import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <DarkModeContextProvider>
+    <AppContext>
       <Component {...pageProps} />
-    </DarkModeContextProvider>
+    </AppContext>
   );
 }
 
