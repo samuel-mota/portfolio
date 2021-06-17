@@ -78,8 +78,21 @@ http://localhost:3000
 <details>
 <summary>Click to expand (<em>Clique para expandir</em>)</summary>
 
+- [ ] interactive/static pages of my larnings (CSS, SCSS, JS, REACT)
+- [ ] pages of useful links (courses, resources, etc)
 - [ ] Add more information in the Skills and Tools icons
 - [ ] Add tooltips
+- [ ] Add 404 and errors pages
+
+https://www.netlify.com/blog/2020/12/08/making-a-custom-404-page-in-next.js/
+
+CHECK THE LANGUAGE DETECTOR AND IF NEXT HAS A BUILT-IN
+ALSO SAVE ON LOCALSTORAGE
+
+https://lokalise.com/blog/how-to-internationalize-react-application-using-i18next/
+
+https://react.i18next.com/legacy-v9/step-by-step-guide
+
 - [x] Localization (PT/EN)
 - [x] Dark Theme 
 - [x] Responsiveness

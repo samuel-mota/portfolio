@@ -5,6 +5,7 @@ import Intro from "../Intro";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useRef, useState, WheelEventHandler } from "react";
 
 interface PortfolioData {
   key: number;
@@ -18,27 +19,28 @@ interface PortfoliosProps {
 }
 
 const Portfolio = ({ portfolios, languages }: PortfoliosProps) => {
-  // const { portfolio, isLoading, isError } = usePortfolios("/api/portfolio");
+  const [scroll, setScroll] = useState(0);
+  const refContainer = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation("common");
 
-  // const [textState, setTextState] = useState("");
-  // const [hasData, setHasData] = useState(false);
+  function handleWheelEvent(e) {
+    if (e.deltaY > 0 && scroll < 800)
+      setScroll(scroll + 100);
+      else if (e.deltaY <= 0 && scroll >= 0) setScroll(scroll - 100);
 
-  // useEffect(() => {
-  //   if (isError) {
-  //     setTextState("failed to load");
-  //     setHasData(false);
-  //   } else if (isLoading) {
-  //     setTextState("loading...");
-  //     setHasData(false);
-  //   } else setHasData(true);
-  // }, [isError, isLoading]);
-    const { t } = useTranslation("common");
+    refContainer.current.scrollLeft = scroll;
+    console.log(scroll);
+  }
 
   return (
     <div className={styles.container}>
       <Intro title="portfolio" />
 
-      <div className={styles.portfolios}>
+      <div
+        className={styles.portfolios}
+        onWheel={(el) => handleWheelEvent(el)}
+        ref={refContainer}
+      >
         {
           //   !hasData ? (
           //   <div className={styles.portfolio}>{textState}</div>
