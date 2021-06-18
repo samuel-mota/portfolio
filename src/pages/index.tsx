@@ -37,15 +37,12 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
 
   // persist locale cookie
   const { locale, defaultLocale } = useRouter();
-
   //https://www.npmjs.com/package/next-translate
   useEffect(() => {
-    if (locale !== defaultLocale) {
       const date = new Date();
-      const expireMs = 100 * 365 * 24 * 60 * 60 * 1000; // 100 days
+      const expireMs = 100 * 24 * 60 * 60 * 1000; // 100 days
       date.setTime(date.getTime() + expireMs);
-      document.cookie = `NEXT_LOCALE=${locale};expires=${date.toUTCString()};path=/`;
-    }
+      document.cookie = `NEXT_LOCALE=${locale};expires=${date.toUTCString()}`;
   }, [locale, defaultLocale]);
 
   return (

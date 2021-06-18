@@ -22,3 +22,9 @@ module.exports = nextTranslate({
     return config;
   },
 });
+
+module.exports = {
+  i18n: {
+    localeDetection: true,
+  }
+}

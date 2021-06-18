@@ -91,7 +91,6 @@ ALSO SAVE ON LOCALSTORAGE
 
 https://lokalise.com/blog/how-to-internationalize-react-application-using-i18next/
 
-https://react.i18next.com/legacy-v9/step-by-step-guide
 
 - [x] Localization (PT/EN)
 - [x] Dark Theme 
