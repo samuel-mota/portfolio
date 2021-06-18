@@ -7,6 +7,7 @@ $widthContainer: 200px;
 .shadow {
   z-index: 20;
   width: $widthContainer;
+  height: 100%;
   filter: drop-shadow(3px 5px 5px var(--shadow-style));
 }
 
@@ -51,7 +52,15 @@ $widthContainer: 200px;
   color: var(--tools-text);
 }
 
+.error404 {
+  background-color: var(--gray5);
+  color: var(--gray2);
+}
+
 @include tablet() {
+  .shadow {
+    width: $widthContainer - 30px;
+  }
 }
 
 @include mobile() {

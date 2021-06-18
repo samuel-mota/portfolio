@@ -6,5 +6,12 @@
   "tools": "tools",
   "this": "this",
   "technologies": "Technologies",
-  "contact_me": "Contact me"
+  "contact_me": "Contact me",
+  "error404": "",
+  "error404_title": "The Force is not here!",
+  "error404_description": "Try to find it on the",
+  "error404_link": "Home Page",
+  "errors_server": "An error {{statusCode}} occurred on server.",
+  "errors_client": "An error {{statusCode}} occurred on client.",
+  "errors_description": "Please be patient, we are working on it..."
 }

@@ -82,16 +82,7 @@ http://localhost:3000
 - [ ] pages of useful links (courses, resources, etc)
 - [ ] Add more information in the Skills and Tools icons
 - [ ] Add tooltips
-- [ ] Add 404 and errors pages
-
-https://www.netlify.com/blog/2020/12/08/making-a-custom-404-page-in-next.js/
-
-CHECK THE LANGUAGE DETECTOR AND IF NEXT HAS A BUILT-IN
-ALSO SAVE ON LOCALSTORAGE
-
-https://lokalise.com/blog/how-to-internationalize-react-application-using-i18next/
-
-
+- [x] Add 404 and errors pages
 - [x] Localization (PT/EN)
 - [x] Dark Theme 
 - [x] Responsiveness

@@ -9,7 +9,6 @@ import { api } from "../services/api";
 import DarkModeButton from "../components/DarkModeButton";
 import { useDarkMode, useMenu } from "../contexts/AppContext";
 import useTranslation from "next-translate/useTranslation";
-import setLanguage from "next-translate/setLanguage";
 
 import Portfolio from "../components/Portfolio";
 import Skills from "../components/Skills";
@@ -48,7 +47,7 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Samuel Mota | Portfolio</title>
+        <title>Portfolio | Samuel Mota</title>
       </Head>
 
       <main

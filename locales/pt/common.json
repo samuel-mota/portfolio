@@ -6,5 +6,12 @@
   "tools": "Ferramentas",
   "this": "este",
   "technologies": "Tecnologias",
-  "contact_me": "Contate-me"
+  "contact_me": "Contate-me",
+  "error404": "",
+  "error404_title": "A Força não está aqui!",
+  "error404_description": "Tente encontrá-la na",
+  "error404_link": "Página Principal",
+  "errors_server": "O erro {{statusCode}} ocorreu no servidor.",
+  "errors_client": "O erro {{statusCode}} ocorreu no lado do cliente.",
+  "errors_description": "Por favor tenha paciência,nós estamos trabalhando nisso..."
 }
