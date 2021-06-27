@@ -78,7 +78,7 @@ http://localhost:3000
 <details>
 <summary>Click to expand (<em>Clique para expandir</em>)</summary>
 
-- [ ] interactive/static pages of my larnings (CSS, SCSS, JS, REACT)
+- [ ] interactive/static pages of my learnings (CSS, SCSS, JS, REACT)
 - [ ] pages of useful links (courses, resources, etc)
 - [ ] Add more information in the Skills and Tools icons
 - [ ] Add tooltips

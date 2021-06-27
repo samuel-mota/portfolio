@@ -159,7 +159,7 @@ export default function Home({ portfolios, languages }: PortfoliosProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const portfolios = [
     {
       key: 0,
