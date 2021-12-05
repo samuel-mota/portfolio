@@ -60,10 +60,14 @@ const UsefulLinks = ({ data }: DataProps) => {
             <th>Website</th>
             <th>Platforms</th>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <th>Description</th>
 =======
             <th>Website</th>
 >>>>>>> 748ca33... api working on notion, already retrieving information
+=======
+            <th>Description</th>
+>>>>>>> c754f29d37d843428144ddc511d0f0c77de5a333
           </tr>
         </thead>
         <tbody>
