@@ -16,7 +16,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta charSet="utf-8" />
           <link rel="alternate" hrefLang="en" href="https://samuelmota.dev/" />
           <link
             rel="alternate"
