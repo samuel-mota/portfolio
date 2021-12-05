@@ -59,7 +59,7 @@ const UsefulLinks = ({ data }: DataProps) => {
             <th>Name</th>
             <th>Website</th>
             <th>Platforms</th>
-            <th>Website</th>
+            <th>Description</th>
           </tr>
         </thead>
         <tbody>

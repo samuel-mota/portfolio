@@ -172,7 +172,7 @@ export const getStaticProps: GetStaticProps = async () => {
       key: 1,
       repo: "biblicamentes",
       picture: "/assets/images/samuel-mota.jpg",
-      projectLink: "https://sandboxsam.ml/",
+      projectLink: "https://biblicamentes.com.br/",
       tech: { MySQL: 0 },
     },
     {
